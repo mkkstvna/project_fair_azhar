@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 80px;
+}
+.menu-text{
+    letter-spacing: 20px;
+    text-decoration: none;
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #cdf7f1;
+    color: rgb(10, 1, 1);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header nav ul li {
+    margin: 0 15px;
+  }
+  
+  .header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header nav ul li a:hover {
+    text-decoration: underline;
+  }
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.breakfast {
+    background-color: rgba(250,203,147,255);
+    background-image: url('https://png.pngtree.com/png-vector/20240129/ourmid/pngtree-a-big-breakfast-food-png-image_11567789.png');
+    background-size:contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.pasta {
+    background-color: rgba(255,255,255,255);
+    color: #000;
+    background-image: url('https://pngimg.com/d/pasta_PNG58.png');
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.pizza {
+    background-color:rgba(238,161,81,255);
+    background-image: url('https://pngfre.com/wp-content/uploads/pizza-png-from-pngfre-3.png');
+    background-size:contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.lunch {
+    background-color: rgba(246,240,242,255);
+    color: #000;
+    background-image: url('https://www.sunnystreetcafe.com/wp-content/uploads/2019/04/lunch.png');
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.coffee {
+    background-color: rgba(116,208,161,255);
+    background-image: url('https://i.pinimg.com/originals/76/63/ec/7663ec0b82a4281b9c88b2a544bd445b.png');
+    background-size:contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.cocktails {
+    background-color: rgba(38,45,53,255);
+    background-image: url('https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Drinks-PNG-/Summer_Cocktail_PNG_Clip_Art_Image.png?m=1629795624');
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.menu-container a{
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+    }
+
+    .header ul {
+        flex-direction: column;
+    }
+
+    .header li {
+        margin: 10px 0;
+    }
+
+    .header a {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-text {
+        font-size: 18px;
+    }
+
+    .header a {
+        font-size: 14px;
+    }
+}

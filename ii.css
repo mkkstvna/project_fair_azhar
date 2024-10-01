@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #f0f0f5;
+    padding-top: 60px; /* Avoids content overlapping with fixed header */
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about-us, #delivery, #contacts {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Menu Container */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-text {
+    z-index: 1;
+    color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+}
+
+.breakfast::before {
+    background-image: url('https://via.placeholder.com/400?text=Breakfast');
+}
+
+.pasta::before {
+    background-image: url('https://via.placeholder.com/400?text=Pasta');
+}
+
+.pizza::before {
+    background-image: url('https://via.placeholder.com/400?text=Pizza');
+}
+
+.lunch::before {
+    background-image: url('https://via.placeholder.com/400?text=Lunch');
+}
+
+.coffee::before {
+    background-image: url('https://via.placeholder.com/400?text=Coffee');
+}
+
+.cocktails::before {
+    background-image: url('https://via.placeholder.com/400?text=Cocktails');
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .menu-item {
+        height: 150px;
+    }
+}
